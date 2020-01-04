@@ -2,7 +2,7 @@
 
 #include "../lib.h"
 #include <boost/test/unit_test.hpp>
-#include "print_ip.h"
+#include "bulk.h"
 
 BOOST_AUTO_TEST_SUITE(app_test_suite)
 
