@@ -6,15 +6,15 @@
 
 class Bulk;
 
-class IInterpreter
+class IInterpreterState
 {
     public:
-        IInterpreter(Bulk& bulk)
+        IInterpreterState(Bulk& bulk)
                 : _bulk(bulk)
         {
         }
 
-        virtual ~IInterpreter()
+        virtual ~IInterpreterState()
         {
         }
 

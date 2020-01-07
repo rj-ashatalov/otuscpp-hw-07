@@ -3,7 +3,7 @@
 #include <iostream>
 
 Sequence::Sequence(Bulk& bulk)
-        : IInterpreter(bulk)
+        : IInterpreterState(bulk)
 {
 
 }
@@ -28,14 +28,14 @@ void Sequence::Exec(std::string ctx)
 
 void Sequence::Initialize()
 {
-    IInterpreter::Initialize();
+    IInterpreterState::Initialize();
     _commands.expressions.clear();
 }
 
 void Sequence::Finalize()
 {
     std::cout << __PRETTY_FUNCTION__ << std::endl;
-    IInterpreter::Finalize();
+    IInterpreterState::Finalize();
     //TODO @a.shatalov: message send commands;
     std::cout << "bulk: " << static_cast<std::string>(_commands) << std::endl;
 }

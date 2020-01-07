@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "IInterpreter.h"
+#include "IInterpreterState.h"
 
-class Sequence: public IInterpreter
+class Sequence: public IInterpreterState
 {
     public:
         Sequence(Bulk& bulk);

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "IInterpreter.h"
+#include "IInterpreterState.h"
 #include <string>
 
-class InfinitSequence: public IInterpreter
+class InfinitSequence: public IInterpreterState
 {
     public:
         InfinitSequence(Bulk& bulk);
@@ -14,7 +14,6 @@ class InfinitSequence: public IInterpreter
     protected:
         std::shared_ptr<Group> _rootGroup;
         std::shared_ptr<Group> _currentGroup;
-        std::shared_ptr<Group> _parentGroup;
 };
 
 

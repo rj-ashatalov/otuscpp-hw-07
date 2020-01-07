@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 #include <typeindex>
-#include "IInterpreter.h"
+#include "IInterpreterState.h"
 #include "Sequence.h"
 #include "InfinitSequence.h"
 
@@ -13,7 +13,7 @@ class Sequence;
 class Bulk
 {
     private:
-        std::map<std::type_index, std::shared_ptr<IInterpreter>> _typeToInterpreter;
+        std::map<std::type_index, std::shared_ptr<IInterpreterState>> _typeToInterpreter;
 
     public:
 
@@ -42,7 +42,7 @@ class Bulk
             _currentState->Initialize();
         }
 
-        std::shared_ptr<IInterpreter> GetState()
+        std::shared_ptr<IInterpreterState> GetState()
         {
             return _currentState;
         }
@@ -69,5 +69,5 @@ class Bulk
 
         int commandBufCount;
     private:
-        std::shared_ptr<IInterpreter> _currentState;
+        std::shared_ptr<IInterpreterState> _currentState;
 };

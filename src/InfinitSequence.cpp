@@ -3,26 +3,25 @@
 #include <iostream>
 
 InfinitSequence::InfinitSequence(Bulk& bulk)
-        : IInterpreter(bulk)
+        : IInterpreterState(bulk)
 {
 
 }
 
 void InfinitSequence::Initialize()
 {
-    IInterpreter::Initialize();
+    IInterpreterState::Initialize();
     if (_rootGroup == nullptr)
     {
-        _rootGroup = std::make_shared<Group>();
-        _parentGroup = nullptr;
-        _currentGroup = _rootGroup;
+        _currentGroup = std::make_shared<Group>();
+        _rootGroup = _currentGroup;
     }
 }
 
 void InfinitSequence::Finalize()
 {
-    IInterpreter::Finalize();
-    if (_currentGroup->parent == nullptr)
+    IInterpreterState::Finalize();
+    if (_currentGroup == nullptr)
     {
         std::cout << __PRETTY_FUNCTION__ << " Expression complete" << std::endl;
         //TODO @a.shatalov: send message
@@ -35,23 +34,24 @@ void InfinitSequence::Exec(std::string ctx)
 {
     if (ctx == "{")
     {
-        _parentGroup = _currentGroup;
-        _currentGroup = std::make_shared<Group>();
+        auto group = std::make_shared<Group>();
+        group->parent = _currentGroup;
+        _currentGroup = group;
         _bulk.SetState<InfinitSequence>();
         return;
     }
 
     if (ctx == "}")
     {
-        if (_rootGroup == _currentGroup)
+        if (_currentGroup->parent == nullptr)
         {
             _currentGroup = nullptr;
             _bulk.SetState<Sequence>();
         }
         else
         {
-            _parentGroup->expressions.push_back(_currentGroup);
-            _currentGroup = _parentGroup;
+            _currentGroup->parent->expressions.push_back(_currentGroup);
+            _currentGroup = _currentGroup->parent;
             _bulk.SetState<InfinitSequence>();
         }
         return;
