@@ -21,6 +21,9 @@ class IInterpreterState
         virtual void Initialize() {};
         virtual void Exec(std::string ctx) = 0;
         virtual void Finalize() {};
+
+//        virtual operator std::string() const {return "";};
+
     protected:
         Bulk& _bulk;
 };

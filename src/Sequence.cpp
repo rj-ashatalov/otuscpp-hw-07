@@ -36,8 +36,10 @@ void Sequence::Finalize()
 {
     std::cout << __PRETTY_FUNCTION__ << std::endl;
     IInterpreterState::Finalize();
-    //TODO @a.shatalov: message send commands;
-    std::cout << "bulk: " << static_cast<std::string>(_commands) << std::endl;
+    if (_commands.expressions.size() >= 0)
+    {
+        _bulk.Dispatch(Event::SEQUENCE_COMPLETE, static_cast<std::string>(_commands));
+    }
 }
 
 

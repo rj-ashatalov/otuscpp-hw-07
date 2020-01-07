@@ -7,10 +7,11 @@
 #include "IInterpreterState.h"
 #include "Sequence.h"
 #include "InfinitSequence.h"
+#include "events/EventDispatcher.h"
 
 class Sequence;
 
-class Bulk
+class Bulk : public EventDispatcher
 {
     private:
         std::map<std::type_index, std::shared_ptr<IInterpreterState>> _typeToInterpreter;

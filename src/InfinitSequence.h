@@ -14,6 +14,7 @@ class InfinitSequence: public IInterpreterState
     protected:
         std::shared_ptr<Group> _rootGroup;
         std::shared_ptr<Group> _currentGroup;
+        bool _awaitFirstCommand = true;
 };
 
 

@@ -15,6 +15,7 @@ void InfinitSequence::Initialize()
     {
         _currentGroup = std::make_shared<Group>();
         _rootGroup = _currentGroup;
+        _awaitFirstCommand = true;
     }
 }
 
@@ -24,8 +25,7 @@ void InfinitSequence::Finalize()
     if (_currentGroup == nullptr)
     {
         std::cout << __PRETTY_FUNCTION__ << " Expression complete" << std::endl;
-        //TODO @a.shatalov: send message
-        std::cout << "bulk: " << static_cast<std::string>(*_rootGroup) << std::endl;
+        _bulk.Dispatch(Event::SEQUENCE_COMPLETE, static_cast<std::string>(*_rootGroup));
         _rootGroup = nullptr;
     }
 }
@@ -60,5 +60,10 @@ void InfinitSequence::Exec(std::string ctx)
     auto command = std::make_shared<Command>();
     command->value = ctx;
     _currentGroup->expressions.push_back(command);
+    if (_awaitFirstCommand)
+    {
+        _awaitFirstCommand = false;
+        _bulk.Dispatch(Event::FIRST_COMMAND, "123");
+    }
 }
 
