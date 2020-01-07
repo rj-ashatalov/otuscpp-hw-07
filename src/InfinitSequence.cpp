@@ -25,7 +25,10 @@ void InfinitSequence::Finalize()
     if (_currentGroup == nullptr)
     {
         std::cout << __PRETTY_FUNCTION__ << " Expression complete" << std::endl;
-        _bulk.Dispatch(Event::SEQUENCE_COMPLETE, static_cast<std::string>(*_rootGroup));
+        if (!_awaitFirstCommand)
+        {
+            _bulk.Dispatch(Event::SEQUENCE_COMPLETE, static_cast<std::string>(*_rootGroup));
+        }
         _rootGroup = nullptr;
     }
 }
@@ -63,7 +66,9 @@ void InfinitSequence::Exec(std::string ctx)
     if (_awaitFirstCommand)
     {
         _awaitFirstCommand = false;
-        _bulk.Dispatch(Event::FIRST_COMMAND, "123");
+        std::stringstream currentTime;
+        currentTime << std::time(nullptr);
+        _bulk.Dispatch(Event::FIRST_COMMAND, currentTime.str());
     }
 }
 

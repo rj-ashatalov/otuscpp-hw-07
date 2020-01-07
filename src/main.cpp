@@ -1,4 +1,5 @@
 #include <iostream>
+#include <regex>
 #include "Bulk.h"
 #include "log/ConsoleLogger.h"
 #include "log/FileLogger.h"
@@ -21,7 +22,7 @@ int main(int, char const* argv[])
     });
     bulk.Subscribe(Event::SEQUENCE_COMPLETE, [&](auto&& message)
     {
-        fileLogger.Log("bulk: " + message);
+        fileLogger.Log(std::regex_replace(message, std::regex{", "}, "\n"));
     });
 
     bulk.Run();
