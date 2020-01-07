@@ -1,5 +1,5 @@
 #include <iostream>
-#include "bulk.h"
+#include "Bulk.h"
 
 //! Main app function
 int main(int, char const *argv[])
