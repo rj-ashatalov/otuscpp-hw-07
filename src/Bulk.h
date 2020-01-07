@@ -36,7 +36,9 @@ class Bulk : public EventDispatcher
             auto it = _typeToInterpreter.find(typeIndex);
             if (it == _typeToInterpreter.end())
             {
-                std::tie(it, std::ignore) = _typeToInterpreter.try_emplace(typeIndex, new T{*this});
+                std::tie(it, std::ignore) = _typeToInterpreter.emplace(std::piecewise_construct
+                        , std::make_tuple(typeIndex)
+                        , std::make_tuple(new T{*this}));
             }
             _currentState = it->second;
 
