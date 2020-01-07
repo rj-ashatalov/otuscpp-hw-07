@@ -1,6 +1,7 @@
 #include "Sequence.h"
 #include "Bulk.h"
 #include <iostream>
+#include <ctime>
 
 Sequence::Sequence(Bulk& bulk)
         : IInterpreterState(bulk)

@@ -1,6 +1,7 @@
 #include "InfinitSequence.h"
 #include "Bulk.h"
 #include <iostream>
+#include <ctime>
 
 InfinitSequence::InfinitSequence(Bulk& bulk)
         : IInterpreterState(bulk)
