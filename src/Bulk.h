@@ -61,9 +61,8 @@ class Bulk : public EventDispatcher
                     _currentState->Finalize();
                     break;
                 }
-                //TODO @a.shatalov: process command
                 _currentState->Exec(command);
-                std::cout << "Input is: " << command << std::endl;
+//                std::cout << "Input is: " << command << std::endl;
             }
             std::cout << "Input complete aborting" << std::endl;
         };
