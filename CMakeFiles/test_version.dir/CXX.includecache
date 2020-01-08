@@ -25,6 +25,10 @@ map
 -
 typeindex
 -
+queue
+-
+zconf.h
+-
 IInterpreterState.h
 src/IInterpreterState.h
 Sequence.h

@@ -4,6 +4,8 @@
 #include <vector>
 #include <map>
 #include <typeindex>
+#include <queue>
+#include <zconf.h>
 #include "IInterpreterState.h"
 #include "Sequence.h"
 #include "InfinitSequence.h"
@@ -63,8 +65,9 @@ class Bulk : public EventDispatcher
                     _currentState->Finalize();
                     break;
                 }
+                std::cout << "Input is: " << command << " Processing... " << std::endl;
+                sleep(1);
                 _currentState->Exec(command);
-//                std::cout << "Input is: " << command << std::endl;
             }
             std::cout << "Input complete aborting" << std::endl;
         };
@@ -72,4 +75,6 @@ class Bulk : public EventDispatcher
         int commandBufCount;
     private:
         std::shared_ptr<IInterpreterState> _currentState;
+
+//        std::queue<std::string> _commandBuffer;
 };

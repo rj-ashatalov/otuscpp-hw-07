@@ -18,7 +18,7 @@ struct FileLogger
                 return;
             }
 
-            std::cout << __PRETTY_FUNCTION__ << std::endl;
+            std::cout << __PRETTY_FUNCTION__ << " Creating file: " << _fileName << std::endl;
             std::ofstream file(_fileName + ".log");
             file << message << std::endl;
             file.close();
