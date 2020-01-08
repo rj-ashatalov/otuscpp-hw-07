@@ -1,5 +1,5 @@
 Package: bulk
-Version: 0.0.3
+Version: 0.0.4
 Section: devel
 Priority: optional
 Architecture: amd64
