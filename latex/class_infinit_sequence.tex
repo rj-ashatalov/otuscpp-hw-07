@@ -1,0 +1,110 @@
+\hypertarget{class_infinit_sequence}{}\section{Infinit\+Sequence Class Reference}
+\label{class_infinit_sequence}\index{Infinit\+Sequence@{Infinit\+Sequence}}
+
+
+{\ttfamily \#include $<$Infinit\+Sequence.\+h$>$}
+
+
+
+Inheritance diagram for Infinit\+Sequence\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_infinit_sequence__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Infinit\+Sequence\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_infinit_sequence__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_infinit_sequence_a7d326180468abe14bc3c3a89a02ae6b2}{Infinit\+Sequence} (\hyperlink{class_bulk}{Bulk} \&bulk)
+\item 
+virtual void \hyperlink{class_infinit_sequence_a53f4ee00e5659bb61b6af8ab1bcc24a5}{Initialize} () override
+\item 
+virtual void \hyperlink{class_infinit_sequence_ab28b9e2f1106aabaa69a6dfbb716ea73}{Finalize} () override
+\item 
+virtual void \hyperlink{class_infinit_sequence_ab12080f4b10b97c2a5e457746a7301c1}{Exec} (std\+::string ctx) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_group}{Group} $>$ \hyperlink{class_infinit_sequence_ababeabf069e6bd4d53be04d2962fe990}{\+\_\+root\+Group}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_group}{Group} $>$ \hyperlink{class_infinit_sequence_afd8d7da621ed72083b00d75297b7f992}{\+\_\+current\+Group}
+\item 
+bool \hyperlink{class_infinit_sequence_ae10e9c4c746b3b7bc01c1d196bc05aa2}{\+\_\+await\+First\+Command} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Infinit\+Sequence@{Infinit\+Sequence}!Infinit\+Sequence@{Infinit\+Sequence}}
+\index{Infinit\+Sequence@{Infinit\+Sequence}!Infinit\+Sequence@{Infinit\+Sequence}}
+\subsubsection[{\texorpdfstring{Infinit\+Sequence(\+Bulk \&bulk)}{InfinitSequence(Bulk &bulk)}}]{\setlength{\rightskip}{0pt plus 5cm}Infinit\+Sequence\+::\+Infinit\+Sequence (
+\begin{DoxyParamCaption}
+\item[{{\bf Bulk} \&}]{bulk}
+\end{DoxyParamCaption}
+)}\hypertarget{class_infinit_sequence_a7d326180468abe14bc3c3a89a02ae6b2}{}\label{class_infinit_sequence_a7d326180468abe14bc3c3a89a02ae6b2}
+
+
+\subsection{Member Function Documentation}
+\index{Infinit\+Sequence@{Infinit\+Sequence}!Exec@{Exec}}
+\index{Exec@{Exec}!Infinit\+Sequence@{Infinit\+Sequence}}
+\subsubsection[{\texorpdfstring{Exec(std\+::string ctx) override}{Exec(std::string ctx) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Infinit\+Sequence\+::\+Exec (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{ctx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_infinit_sequence_ab12080f4b10b97c2a5e457746a7301c1}{}\label{class_infinit_sequence_ab12080f4b10b97c2a5e457746a7301c1}
+
+
+Implements \hyperlink{class_i_interpreter_state_ac178373a2622323811db25b6a118aef4}{I\+Interpreter\+State}.
+
+\index{Infinit\+Sequence@{Infinit\+Sequence}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!Infinit\+Sequence@{Infinit\+Sequence}}
+\subsubsection[{\texorpdfstring{Finalize() override}{Finalize() override}}]{\setlength{\rightskip}{0pt plus 5cm}void Infinit\+Sequence\+::\+Finalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_infinit_sequence_ab28b9e2f1106aabaa69a6dfbb716ea73}{}\label{class_infinit_sequence_ab28b9e2f1106aabaa69a6dfbb716ea73}
+
+
+Reimplemented from \hyperlink{class_i_interpreter_state_abdc7f5e834aa48047959152b4a090c08}{I\+Interpreter\+State}.
+
+\index{Infinit\+Sequence@{Infinit\+Sequence}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Infinit\+Sequence@{Infinit\+Sequence}}
+\subsubsection[{\texorpdfstring{Initialize() override}{Initialize() override}}]{\setlength{\rightskip}{0pt plus 5cm}void Infinit\+Sequence\+::\+Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_infinit_sequence_a53f4ee00e5659bb61b6af8ab1bcc24a5}{}\label{class_infinit_sequence_a53f4ee00e5659bb61b6af8ab1bcc24a5}
+
+
+Reimplemented from \hyperlink{class_i_interpreter_state_a4a8559db87100cc214e544d274ee4174}{I\+Interpreter\+State}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Infinit\+Sequence@{Infinit\+Sequence}!\+\_\+await\+First\+Command@{\+\_\+await\+First\+Command}}
+\index{\+\_\+await\+First\+Command@{\+\_\+await\+First\+Command}!Infinit\+Sequence@{Infinit\+Sequence}}
+\subsubsection[{\texorpdfstring{\+\_\+await\+First\+Command}{_awaitFirstCommand}}]{\setlength{\rightskip}{0pt plus 5cm}bool Infinit\+Sequence\+::\+\_\+await\+First\+Command = true\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_infinit_sequence_ae10e9c4c746b3b7bc01c1d196bc05aa2}{}\label{class_infinit_sequence_ae10e9c4c746b3b7bc01c1d196bc05aa2}
+\index{Infinit\+Sequence@{Infinit\+Sequence}!\+\_\+current\+Group@{\+\_\+current\+Group}}
+\index{\+\_\+current\+Group@{\+\_\+current\+Group}!Infinit\+Sequence@{Infinit\+Sequence}}
+\subsubsection[{\texorpdfstring{\+\_\+current\+Group}{_currentGroup}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Group}$>$ Infinit\+Sequence\+::\+\_\+current\+Group\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_infinit_sequence_afd8d7da621ed72083b00d75297b7f992}{}\label{class_infinit_sequence_afd8d7da621ed72083b00d75297b7f992}
+\index{Infinit\+Sequence@{Infinit\+Sequence}!\+\_\+root\+Group@{\+\_\+root\+Group}}
+\index{\+\_\+root\+Group@{\+\_\+root\+Group}!Infinit\+Sequence@{Infinit\+Sequence}}
+\subsubsection[{\texorpdfstring{\+\_\+root\+Group}{_rootGroup}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Group}$>$ Infinit\+Sequence\+::\+\_\+root\+Group\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_infinit_sequence_ababeabf069e6bd4d53be04d2962fe990}{}\label{class_infinit_sequence_ababeabf069e6bd4d53be04d2962fe990}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_infinit_sequence_8h}{Infinit\+Sequence.\+h}\item 
+src/\hyperlink{_infinit_sequence_8cpp}{Infinit\+Sequence.\+cpp}\end{DoxyCompactItemize}
