@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpatch_version.a  CMakeFiles/patch_version.dir/lib.cpp.o
+/usr/bin/ranlib libpatch_version.a

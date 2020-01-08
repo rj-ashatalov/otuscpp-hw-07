@@ -1,0 +1,1 @@
+/usr/local/clang-7.0.0/bin/clang++    -rdynamic CMakeFiles/bulk.dir/src/InfinitSequence.cpp.o CMakeFiles/bulk.dir/src/Sequence.cpp.o CMakeFiles/bulk.dir/src/main.cpp.o  -o bulk libpatch_version.a -lpthread 

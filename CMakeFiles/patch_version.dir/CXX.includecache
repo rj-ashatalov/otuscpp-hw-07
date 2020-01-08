@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/rj-ashatalov/otuscpp-hw-07/lib.cpp
+lib.h
+/home/travis/build/rj-ashatalov/otuscpp-hw-07/lib.h
+version.h
+/home/travis/build/rj-ashatalov/otuscpp-hw-07/version.h
+
+/home/travis/build/rj-ashatalov/otuscpp-hw-07/lib.h
+
+/home/travis/build/rj-ashatalov/otuscpp-hw-07/version.h
+

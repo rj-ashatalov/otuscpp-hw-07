@@ -1,0 +1,21 @@
+Start testing: Jan 08 00:00 UTC
+----------------------------------------------------------
+1/1 Testing: bulk_tests
+1/1 Test: bulk_tests
+Command: "/home/travis/build/rj-ashatalov/otuscpp-hw-07/test_version"
+Directory: /home/travis/build/rj-ashatalov/otuscpp-hw-07
+"bulk_tests" start time: Jan 08 00:00 UTC
+Output:
+----------------------------------------------------------
+Running 1 test case...
+
+*** No errors detected
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"bulk_tests" end time: Jan 08 00:00 UTC
+"bulk_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 08 00:00 UTC
