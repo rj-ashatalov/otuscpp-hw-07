@@ -29,15 +29,13 @@ events/EventDispatcher.h
 /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/events/EventDispatcher.h
 
 /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/IInterpreterState.h
-string
+utils/utils.h
 -
-sstream
+string
 -
 vector
 -
 memory
--
-algorithm
 -
 
 /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/InfinitSequence.cpp
@@ -105,4 +103,20 @@ log/ConsoleLogger.h
 /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/log/ConsoleLogger.h
 log/FileLogger.h
 /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/log/FileLogger.h
+ctime
+-
+IInterpreterState.h
+/home/travis/build/rj-ashatalov/otuscpp-hw-07/src/IInterpreterState.h
+
+src/utils/utils.h
+vector
+-
+string
+-
+sstream
+-
+memory
+-
+algorithm
+-
 

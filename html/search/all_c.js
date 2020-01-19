@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['run',['Run',['../class_bulk.html#a1be5c7493701769d6f95f1b37d94b752',1,'Bulk']]]
+  ['parent',['parent',['../struct_group.html#a97509613c8c410bb6a3c281b102a1532',1,'Group']]],
+  ['preparefilename',['PrepareFilename',['../struct_file_logger.html#a9f9d1f28631a59331a8922aeb67c124e',1,'FileLogger']]]
 ];

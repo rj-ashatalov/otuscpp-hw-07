@@ -9,3 +9,4 @@ CMakeFiles/test_version.dir/tests/test_version.cpp.o
  src/InfinitSequence.h
  src/Sequence.h
  src/events/EventDispatcher.h
+ src/utils/utils.h

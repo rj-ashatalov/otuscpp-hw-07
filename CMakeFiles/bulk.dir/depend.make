@@ -7,6 +7,7 @@ CMakeFiles/bulk.dir/src/InfinitSequence.cpp.o: src/InfinitSequence.cpp
 CMakeFiles/bulk.dir/src/InfinitSequence.cpp.o: src/InfinitSequence.h
 CMakeFiles/bulk.dir/src/InfinitSequence.cpp.o: src/Sequence.h
 CMakeFiles/bulk.dir/src/InfinitSequence.cpp.o: src/events/EventDispatcher.h
+CMakeFiles/bulk.dir/src/InfinitSequence.cpp.o: src/utils/utils.h
 
 CMakeFiles/bulk.dir/src/Sequence.cpp.o: src/Bulk.h
 CMakeFiles/bulk.dir/src/Sequence.cpp.o: src/IInterpreterState.h
@@ -14,6 +15,7 @@ CMakeFiles/bulk.dir/src/Sequence.cpp.o: src/InfinitSequence.h
 CMakeFiles/bulk.dir/src/Sequence.cpp.o: src/Sequence.cpp
 CMakeFiles/bulk.dir/src/Sequence.cpp.o: src/Sequence.h
 CMakeFiles/bulk.dir/src/Sequence.cpp.o: src/events/EventDispatcher.h
+CMakeFiles/bulk.dir/src/Sequence.cpp.o: src/utils/utils.h
 
 CMakeFiles/bulk.dir/src/main.cpp.o: src/Bulk.h
 CMakeFiles/bulk.dir/src/main.cpp.o: src/IInterpreterState.h
@@ -23,4 +25,5 @@ CMakeFiles/bulk.dir/src/main.cpp.o: src/events/EventDispatcher.h
 CMakeFiles/bulk.dir/src/main.cpp.o: src/log/ConsoleLogger.h
 CMakeFiles/bulk.dir/src/main.cpp.o: src/log/FileLogger.h
 CMakeFiles/bulk.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/bulk.dir/src/main.cpp.o: src/utils/utils.h
 

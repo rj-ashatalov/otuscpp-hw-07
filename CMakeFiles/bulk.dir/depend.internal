@@ -8,6 +8,7 @@ CMakeFiles/bulk.dir/src/InfinitSequence.cpp.o
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/InfinitSequence.h
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/Sequence.h
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/events/EventDispatcher.h
+ src/utils/utils.h
 CMakeFiles/bulk.dir/src/Sequence.cpp.o
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/Bulk.h
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/IInterpreterState.h
@@ -15,6 +16,7 @@ CMakeFiles/bulk.dir/src/Sequence.cpp.o
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/Sequence.cpp
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/Sequence.h
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/events/EventDispatcher.h
+ src/utils/utils.h
 CMakeFiles/bulk.dir/src/main.cpp.o
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/Bulk.h
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/IInterpreterState.h
@@ -24,3 +26,4 @@ CMakeFiles/bulk.dir/src/main.cpp.o
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/log/ConsoleLogger.h
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/log/FileLogger.h
  /home/travis/build/rj-ashatalov/otuscpp-hw-07/src/main.cpp
+ src/utils/utils.h

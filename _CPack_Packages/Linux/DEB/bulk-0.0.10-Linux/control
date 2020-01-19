@@ -1,0 +1,10 @@
+Package: bulk
+Version: 0.0.10
+Section: devel
+Priority: optional
+Architecture: amd64
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
+Installed-Size: 287
+Maintainer: a.shatalov@rj-games.com
+Description: bulk built using CMake
+

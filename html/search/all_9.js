@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#a44f39fa694ede1d31522a3d5bb38d6ba',1,'main.cpp']]],
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['log',['Log',['../struct_console_logger.html#a64169cc3b9f8a861dc874a6a174fd2e8',1,'ConsoleLogger::Log()'],['../struct_file_logger.html#ad315ff83f838f680c83c22533cd63a26',1,'FileLogger::Log()']]]
 ];

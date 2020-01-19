@@ -39,15 +39,13 @@ events/EventDispatcher.h
 src/events/EventDispatcher.h
 
 src/IInterpreterState.h
-string
+utils/utils.h
 -
-sstream
+string
 -
 vector
 -
 memory
--
-algorithm
 -
 
 src/InfinitSequence.h
@@ -70,5 +68,17 @@ string
 functional
 -
 map
+-
+
+src/utils/utils.h
+vector
+-
+string
+-
+sstream
+-
+memory
+-
+algorithm
 -
 

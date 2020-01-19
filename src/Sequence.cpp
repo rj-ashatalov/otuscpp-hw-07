@@ -23,9 +23,7 @@ void Sequence::Exec(std::string ctx)
 
     if (_commands.expressions.size() == 1)
     {
-        std::stringstream currentTime;
-        currentTime << std::time(nullptr);
-        _bulk.Dispatch(Event::FIRST_COMMAND, currentTime.str());
+        _bulk.eventFirstCommand.Dispatch(std::time(nullptr));
     }
 
     if (_commands.expressions.size() >= static_cast<size_t>(_bulk.commandBufCount))
@@ -46,7 +44,7 @@ void Sequence::Finalize()
     IInterpreterState::Finalize();
     if (_commands.expressions.size() > 0)
     {
-        _bulk.Dispatch(Event::SEQUENCE_COMPLETE, static_cast<std::string>(_commands));
+        _bulk.eventSequenceComplete.Dispatch(_commands);
     }
 }
 

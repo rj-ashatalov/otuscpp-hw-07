@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Bulk: EventDispatcher Class Reference</title>
+<title>Bulk: EventDispatcher&lt; Args &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,53 +88,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_event_dispatcher-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">EventDispatcher Class Reference</div>  </div>
+<div class="title">EventDispatcher&lt; Args &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_event_dispatcher_8h_source.html">EventDispatcher.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for EventDispatcher:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_event_dispatcher__inherit__graph.png" border="0" usemap="#_event_dispatcher_inherit__map" alt="Inheritance graph"/></div>
-<map name="_event_dispatcher_inherit__map" id="_event_dispatcher_inherit__map">
-<area shape="rect" id="node2" href="class_bulk.html" title="Bulk" alt="" coords="44,80,93,107"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a39e8796a161843dbf05fa091c61c62e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_dispatcher.html#a39e8796a161843dbf05fa091c61c62e7">Subscribe</a> (std::string eventId, handler_type &amp;&amp;handler)</td></tr>
-<tr class="separator:a39e8796a161843dbf05fa091c61c62e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7160e147f743930de0c9df797cc5c3b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_dispatcher.html#a7160e147f743930de0c9df797cc5c3b6">UnsubscribeAll</a> (std::string eventId)</td></tr>
-<tr class="separator:a7160e147f743930de0c9df797cc5c3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0aeee2cc4d5414feb99d7010d739b9eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_dispatcher.html#a0aeee2cc4d5414feb99d7010d739b9eb">Dispatch</a> (std::string eventId, std::string message)</td></tr>
-<tr class="separator:a0aeee2cc4d5414feb99d7010d739b9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2faff743f86cad86215acd473f68c92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_dispatcher.html#ac2faff743f86cad86215acd473f68c92">Subscribe</a> (handler_type &amp;&amp;handler)</td></tr>
+<tr class="separator:ac2faff743f86cad86215acd473f68c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac696d0bc5b66ee4f3a13c469e8fc7975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_dispatcher.html#ac696d0bc5b66ee4f3a13c469e8fc7975">UnsubscribeAll</a> ()</td></tr>
+<tr class="separator:ac696d0bc5b66ee4f3a13c469e8fc7975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dfe75d89d1692665861bfd0e908c75e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_dispatcher.html#a6dfe75d89d1692665861bfd0e908c75e">Dispatch</a> (Args...args)</td></tr>
+<tr class="separator:a6dfe75d89d1692665861bfd0e908c75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0aeee2cc4d5414feb99d7010d739b9eb"></a>
+<a class="anchor" id="a6dfe75d89d1692665861bfd0e908c75e"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void EventDispatcher::Dispatch </td>
+          <td class="memname">void <a class="el" href="class_event_dispatcher.html">EventDispatcher</a>&lt; Args &gt;::Dispatch </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>eventId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -146,29 +130,21 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a39e8796a161843dbf05fa091c61c62e7"></a>
+<a class="anchor" id="ac2faff743f86cad86215acd473f68c92"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void EventDispatcher::Subscribe </td>
+          <td class="memname">void <a class="el" href="class_event_dispatcher.html">EventDispatcher</a>&lt; Args &gt;::Subscribe </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>eventId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">handler_type &amp;&amp;&#160;</td>
-          <td class="paramname"><em>handler</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>handler</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -180,18 +156,19 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7160e147f743930de0c9df797cc5c3b6"></a>
+<a class="anchor" id="ac696d0bc5b66ee4f3a13c469e8fc7975"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void EventDispatcher::UnsubscribeAll </td>
+          <td class="memname">void <a class="el" href="class_event_dispatcher.html">EventDispatcher</a>&lt; Args &gt;::UnsubscribeAll </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>eventId</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

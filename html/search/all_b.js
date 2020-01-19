@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['parent',['parent',['../struct_group.html#a97509613c8c410bb6a3c281b102a1532',1,'Group']]],
-  ['preparefilename',['PrepareFilename',['../struct_file_logger.html#a9f9d1f28631a59331a8922aeb67c124e',1,'FileLogger']]]
+  ['string',['string',['../struct_i_expression.html#af8657bb1d333c4a3f3b97b449725bc9b',1,'IExpression::string()'],['../struct_command.html#ae4fd05a91d2e11794bd6427aa37b8c77',1,'Command::string()'],['../struct_group.html#a0ae2d99c278c335a0cc1a892c1a6eeb4',1,'Group::string()']]]
 ];

@@ -1,5 +1,6 @@
 <map id="InfinitSequence" name="InfinitSequence">
-<area shape="rect" id="node2" href="$class_i_interpreter_state.html" title="IInterpreterState" alt="" coords="5,171,133,197"/>
-<area shape="rect" id="node3" href="$class_bulk.html" title="Bulk" alt="" coords="45,81,94,108"/>
-<area shape="rect" id="node4" href="$class_event_dispatcher.html" title="EventDispatcher" alt="" coords="6,5,133,32"/>
+<area shape="rect" id="node2" href="$class_i_interpreter_state.html" title="IInterpreterState" alt="" coords="154,184,282,211"/>
+<area shape="rect" id="node3" href="$class_bulk.html" title="Bulk" alt="" coords="193,95,243,121"/>
+<area shape="rect" id="node4" href="$class_event_dispatcher.html" title="EventDispatcher\&lt; time_t \&gt;" alt="" coords="5,5,204,32"/>
+<area shape="rect" id="node5" href="$class_event_dispatcher.html" title="EventDispatcher\&lt; Group &amp; \&gt;" alt="" coords="227,5,438,32"/>
 </map>
