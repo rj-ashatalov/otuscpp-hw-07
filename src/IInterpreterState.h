@@ -1,4 +1,6 @@
 #pragma once
+
+#include <utils/utils.h>
 #include <string>
 #include <sstream>
 #include <vector>
@@ -22,8 +24,6 @@ class IInterpreterState
         virtual void Initialize() {};
         virtual void Exec(std::string ctx) = 0;
         virtual void Finalize() {};
-
-//        virtual operator std::string() const {return "";};
 
     protected:
         Bulk& _bulk;
@@ -56,17 +56,6 @@ struct Group: public IExpression
 
     virtual operator std::string() const override
     {
-        if (expressions.size() <= 0)
-        {
-            return "";
-        }
-
-        std::stringstream output;
-        std::for_each(expressions.begin(), std::prev(expressions.end()), [&output](auto &item)
-        {
-            output << static_cast<std::string>(*item) << ", ";
-        });
-        output << static_cast<std::string>(*expressions.back());
-        return output.str();
+        return Utils::Join(expressions, ", ");
     }
 };

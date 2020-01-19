@@ -13,12 +13,15 @@
 
 class Sequence;
 
-class Bulk : public EventDispatcher
+class Bulk
 {
     private:
         std::map<std::type_index, std::shared_ptr<IInterpreterState>> _typeToInterpreter;
 
     public:
+
+        EventDispatcher<Group&> eventSequenceComplete;
+        EventDispatcher<time_t> eventFirstCommand;
 
         Bulk(int commandBufCount)
                 : commandBufCount(commandBufCount)
@@ -66,7 +69,6 @@ class Bulk : public EventDispatcher
                     break;
                 }
                 std::cout << "Input is: " << command << " Processing... " << std::endl;
-                sleep(1);
                 _currentState->Exec(command);
             }
             std::cout << "Input complete aborting" << std::endl;
@@ -75,6 +77,4 @@ class Bulk : public EventDispatcher
         int commandBufCount;
     private:
         std::shared_ptr<IInterpreterState> _currentState;
-
-//        std::queue<std::string> _commandBuffer;
 };

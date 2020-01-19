@@ -1,7 +1,7 @@
 #include "InfinitSequence.h"
 #include "Bulk.h"
 #include <iostream>
-#include <ctime>
+
 
 InfinitSequence::InfinitSequence(Bulk& bulk)
         : IInterpreterState(bulk)
@@ -28,7 +28,7 @@ void InfinitSequence::Finalize()
         std::cout << __PRETTY_FUNCTION__ << " Expression complete" << std::endl;
         if (!_awaitFirstCommand)
         {
-            _bulk.Dispatch(Event::SEQUENCE_COMPLETE, static_cast<std::string>(*_rootGroup));
+            _bulk.eventSequenceComplete.Dispatch(*_rootGroup);
         }
         _rootGroup = nullptr;
     }
@@ -67,9 +67,7 @@ void InfinitSequence::Exec(std::string ctx)
     if (_awaitFirstCommand)
     {
         _awaitFirstCommand = false;
-        std::stringstream currentTime;
-        currentTime << std::time(nullptr);
-        _bulk.Dispatch(Event::FIRST_COMMAND, currentTime.str());
+        _bulk.eventFirstCommand.Dispatch(std::time(nullptr));
     }
 }
 

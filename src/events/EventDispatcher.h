@@ -4,19 +4,14 @@
 #include <functional>
 #include <map>
 
-namespace Event
-{
-    static const std::string SEQUENCE_COMPLETE = "suquence_complete";
-    static const std::string FIRST_COMMAND = "first_command";
-}
-
+template<typename ...Args>
 class EventDispatcher
 {
-        using handler_type = std::function<void(std::string)>;
+        using handler_type = std::function<void(Args...)>;
 
         struct Subscription
         {
-            Subscription(const handler_type& handler)
+            Subscription(handler_type&& handler)
                     : handler(handler)
             {
             }
@@ -25,43 +20,26 @@ class EventDispatcher
         };
 
     public:
-        void Subscribe(std::string eventId, handler_type&& handler)
+        void Subscribe(handler_type&& handler)
         {
-
-            auto it = _eventIdToHandlerList.find(eventId);
-            if (it == _eventIdToHandlerList.end())
-            {
-                std::tie(it, std::ignore) = _eventIdToHandlerList.emplace(std::piecewise_construct
-                        , std::make_tuple(eventId)
-                        , std::make_tuple());
-            }
-
-            auto&& subscription = std::make_shared<Subscription>(handler);
-            it->second.push_back(subscription);
+            auto&& subscription = std::make_shared<Subscription>(std::forward<std::remove_reference_t<handler_type>>(handler));
+            _subscriptionList.push_back(subscription);
         };
 
-        void UnsubscribeAll(std::string eventId)
+        void UnsubscribeAll()
         {
-            auto it = _eventIdToHandlerList.find(eventId);
-            if (it != _eventIdToHandlerList.end())
-            {
-                _eventIdToHandlerList.erase(it);
-            }
+            _subscriptionList.clear();
         };
 
-        void Dispatch(std::string eventId, std::string message)
+        void Dispatch(Args... args)
         {
-            auto it = _eventIdToHandlerList.find(eventId);
-            if (it != _eventIdToHandlerList.end())
+            for (auto& subscription: _subscriptionList)
             {
-                for (auto&& subscription: it->second)
-                {
-                    subscription->handler(message);
-                }
+                subscription->handler(std::forward<Args>(args)...);
             }
         };
     private:
-        std::map<std::string, std::vector<std::shared_ptr<Subscription>>> _eventIdToHandlerList;
+        std::vector<std::shared_ptr<Subscription>> _subscriptionList;
 };
 
 
