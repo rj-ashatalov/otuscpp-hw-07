@@ -62,7 +62,7 @@ class Bulk
             {
                 std::cout << "Waiting for input:" << std::endl;
                 std::string command;
-                std::cin >> command;
+                std::getline(std::cin, command);
                 if (std::cin.eof())
                 {
                     _currentState->Finalize();
